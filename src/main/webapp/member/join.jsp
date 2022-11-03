@@ -74,7 +74,6 @@
 </head>
 <body>
 	<h2> 회원가입 페이지 </h2>
-		<article>
 			<form action="" method="post" name="fr" id="join">
 				<fieldset>
 					<legend> 회원가입 정보 </legend> 
@@ -115,6 +114,6 @@
 						<input type="button" value="돌아가기" >
 				</div>
 			</form>
-			</article>
+			
 </body>
 </html>
