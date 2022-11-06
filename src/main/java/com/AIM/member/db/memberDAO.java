@@ -54,19 +54,17 @@ public class memberDAO {
 		
 		try {
 			con = getConnection();
-			sql = "insert into AIM_member(mb_id,mb_pw,mb_name,mb_mb_nick,mb_birth1,mb_birth2,mb_birth3,mb_gender,mb_tel)"
-					+"value(?,?,?,?,?,?,?,?,?)";
+			sql = "insert into class7_220721_team3(mb_id,mb_pw,mb_name,mb_mb_nick,mb_birth,mb_gender,mb_tel)"
+					+"value(?,?,?,?,?,?,?)";
 			pstmt = con.prepareStatement(sql);
 			
 			pstmt.setString(1, dto.getMb_id());
 			pstmt.setString(2, dto.getMb_pw());
 			pstmt.setString(3, dto.getMb_name());
 			pstmt.setString(4, dto.getMb_nick());
-			pstmt.setString(5, dto.getMb_birth1());
-			pstmt.setString(6, dto.getMb_birth2());
-			pstmt.setString(7, dto.getMb_birth3());
-			pstmt.setString(8, dto.getMb_gender());
-			pstmt.setString(9, dto.getMb_tel());
+			pstmt.setString(5, dto.getMb_birth());
+			pstmt.setString(6, dto.getMb_gender());
+			pstmt.setString(7, dto.getMb_tel());
 			
 			int result = pstmt.executeUpdate();
 			

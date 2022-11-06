@@ -6,9 +6,7 @@ public class memberDTO {
 	private String mb_pw;
 	private String mb_name;
 	private String mb_nick;
-	private String mb_birth1;
-	private String mb_birth2;
-	private String mb_birth3;
+	private String mb_birth;
 	private String mb_gender;
 	private String mb_tel;
 	public String getMb_id() {
@@ -35,23 +33,11 @@ public class memberDTO {
 	public void setMb_nick(String mb_nick) {
 		this.mb_nick = mb_nick;
 	}
-	public String getMb_birth1() {
-		return mb_birth1;
+	public String getMb_birth() {
+		return mb_birth;
 	}
-	public void setMb_birth1(String mb_birth1) {
-		this.mb_birth1 = mb_birth1;
-	}
-	public String getMb_birth2() {
-		return mb_birth2;
-	}
-	public void setMb_birth2(String mb_birth2) {
-		this.mb_birth2 = mb_birth2;
-	}
-	public String getMb_birth3() {
-		return mb_birth3;
-	}
-	public void setMb_birth3(String mb_birth3) {
-		this.mb_birth3 = mb_birth3;
+	public void setMb_birth(String mb_birth) {
+		this.mb_birth = mb_birth;
 	}
 	public String getMb_gender() {
 		return mb_gender;
@@ -68,9 +54,9 @@ public class memberDTO {
 	@Override
 	public String toString() {
 		return "memberDTO [mb_id=" + mb_id + ", mb_pw=" + mb_pw + ", mb_name=" + mb_name + ", mb_nick=" + mb_nick
-				+ ", mb_birth1=" + mb_birth1 + ", mb_birth2=" + mb_birth2 + ", mb_birth3=" + mb_birth3 + ", mb_gender="
-				+ mb_gender + ", mb_tel=" + mb_tel + "]";
+				+ ", mb_birth=" + mb_birth + ", mb_gender=" + mb_gender + ", mb_tel=" + mb_tel + "]";
 	}
+	
 	
 	
 	

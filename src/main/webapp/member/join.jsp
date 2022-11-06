@@ -57,19 +57,19 @@
 			document.fr.mb_nick.focus();
 			return;
 		}
-		if(document.fr.mb_birth1.value == "년"){
+		if(document.fr.mb_birth.value == "년"){
 			alert('년도를 선택해 주세요');
 			document.fr.mb_birth1.focus();
 			return;
 		}
-		if(document.fr.mb_birth2.value == "월"){
+		if(document.fr.mb_birth.value == "월"){
 			alert('월을 선택해 주세요');
-			document.fr.mb_birth2.focus();
+			document.fr.mb_birth.focus();
 			return;
 		}
-		if(document.fr.mb_birth3.value == "일"){
+		if(document.fr.mb_birth.value == "일"){
 			alert('일을 선택해 주세요');
-			document.fr.mb_birth3.focus();
+			document.fr.mb_birth.focus();
 			return;
 		}
 		if(document.fr.mb_gender.value == ""){
@@ -92,7 +92,7 @@
 </head>
 <body>
 	<h2> 회원가입 페이지 </h2>
-			<form action="./AIM.co.kr" method="post" name="fr" id="join">
+			<form action="./MemberJoinAcion.me" method="post" name="fr" id="join">
 				<fieldset>
 					<legend> 회원가입 정보 </legend> 
 					<label>ID :</label> <input type="text" name="mb_id" class="mb_id" maxlength="12" >
@@ -103,19 +103,19 @@
 					<label>별명 : </label><input type="text" name="mb_nick">
 										<input type="submit" name="NickCheck" value="닉네임중복확인" onclick="fun03()"> <br>
 					<label>생년월일 : </label>
-								<select name="mb_birth1">
+								<select name="mb_birth">
 									<option> 년 </option>
-									<c:forEach var="y" begin="2000" end="2014" step="1">
+									<c:forEach var="y" begin="1910" end="2014" step="1">
 										<option value="${y }">${y }년 </option>
 									</c:forEach>
 								</select>
-								<select name="mb_birth2">
+								<select name="mb_birth">
 									<option> 월 </option>
 									<c:forEach var="m" begin="1" end="12" step="1">
 										<option value="${m }">${m }월</option>
 									</c:forEach>								
 								</select>
-								<select name="mb_birth3">
+								<select name="mb_birth">
 									<option> 일 </option>
 									<c:forEach var="d" begin="1" end="31" step="1">
 										<option value="${d }">${d }일</option>
