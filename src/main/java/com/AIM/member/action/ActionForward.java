@@ -1,4 +1,4 @@
-package com.AIM.Action;
+package com.AIM.member.action;
 
 public class ActionForward {
 

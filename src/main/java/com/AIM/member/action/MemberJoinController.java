@@ -1,15 +1,16 @@
-package com.AIM.Action;
+package com.AIM.member.action;
 
 import java.io.IOException;
 
-import com.AIM.Action.Action;
-import com.AIM.Action.ActionForward;
-import com.AIM.Action.MemberJoinAction;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.AIM.member.action.Action;
+import com.AIM.member.action.ActionForward;
+import com.AIM.member.action.MemberJoinAction;
 
 
 

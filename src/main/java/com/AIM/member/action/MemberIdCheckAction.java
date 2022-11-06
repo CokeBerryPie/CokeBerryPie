@@ -1,4 +1,4 @@
-package com.AIM.Action;
+package com.AIM.member.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
