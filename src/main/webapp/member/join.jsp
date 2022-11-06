@@ -17,7 +17,7 @@
 		
 		var inputID = document.fr.mb_id.value;
 		
-		window.open(""+inputID,"","width=,height=,top=,left=");	
+		window.open("./MemberIdCheck.me?inputID"+inputID,"","width=400,height=250,top=200,left=100");	
 	}	
 	
 	function fun02(){

@@ -11,7 +11,7 @@
 	function IDCheck(){
 		alert('아이디 사용하기');
 			
-		opener.document.fr.id.value = document.ckfr.IDCheck.value;
+		opener.document.fr.mb_id.value = document.ckfr.IDCheck.value;
 	
 		window.close();
 	}
@@ -20,7 +20,8 @@
 </head>
 <body>
 	<h1>idCheck.jsp(중복체크)</h1>
-	<form action="" method="post" name="ckfr">
+	
+	<form action="./MemberIdCheckAction.me" method="post" name="ckfr">
 		아이디 : <input type="text" name="mb_id" value="${param.inputID }">
 		<input type="submit" value="중복확인">	
 	</form>

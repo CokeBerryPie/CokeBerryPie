@@ -87,6 +87,11 @@ public class memberDAO {
 	
 	// 회원가입
 	
+	// 아이디 check
+	
+	
+	// 아이디 check
+	
 	
 	
 }

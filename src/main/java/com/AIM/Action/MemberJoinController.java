@@ -39,8 +39,8 @@ public class MemberJoinController extends HttpServlet {
 		Action action = null;
 		ActionForward forward = null;
 		
-		if(command.equals("/join.me")) {
-			System.out.println(" C : /join.me 호출");
+		if(command.equals("/MemberJoin.me")) {
+			System.out.println(" C : /MemberJoin.me 호출");
 			System.out.println(" C : 패턴1");
 						
 			forward = new ActionForward();
@@ -48,8 +48,8 @@ public class MemberJoinController extends HttpServlet {
 			forward.setRedirect(false);
 		}
 		else if(command.equals("./MemberJoinAction.me")){
-			System.out.println("Action 호출");
-			System.out.println("C : 패턴2");
+			System.out.println(" C : Action 호출");
+			System.out.println(" C : 패턴2");
 			
 			action = new MemberJoinAction();
 			try {
@@ -57,6 +57,14 @@ public class MemberJoinController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+		}
+		else if (command.equals("./MemberIdCheck.me")) {
+			System.out.println(" C : /MemberIdCheck.me ");
+		    System.out.println(" C : 패턴1 ");
+		    
+		    		forward = new ActionForward();
+		    forward.setPath("./member/idCheck.jsp");
+		    forward.setRedirect(false);
 		}
 		
 
