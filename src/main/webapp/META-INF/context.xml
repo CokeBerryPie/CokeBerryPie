@@ -2,7 +2,7 @@
 
 <Context>
    <Resource 
-     name="jdbc/mvc" 
+     name="jdbc/aim_join" 
      auth="Container" 
      type="javax.sql.DataSource" 
      driverClassName="com.mysql.cj.jdbc.Driver" 

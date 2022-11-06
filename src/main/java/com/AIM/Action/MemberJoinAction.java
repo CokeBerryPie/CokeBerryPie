@@ -21,11 +21,14 @@ public class MemberJoinAction implements Action {
 			dto.setMb_nick(request.getParameter("mb_nick"));
 			dto.setMb_gender(request.getParameter("gender"));
 			dto.setMb_tel(request.getParameter("mb_tel"));
+		    dto.setMb_grade(Integer.parseInt(request.getParameter("grade")));
+			dto.setMb_pay(Integer.parseInt(request.getParameter("pay")));
+			dto.setMb_view(Integer.parseInt(request.getParameter("view")));
 			
 			String[] birthArr = request.getParameterValues("mb_birth");
 			
 			if(birthArr != null) {
-				dto.setMb_birth(birthArr[0]+"."+birthArr[1]+"."+birthArr[2]);
+				dto.setMb_birth(birthArr[0]+"-"+birthArr[1]+"-"+birthArr[2]);
 			}
 			
 			memberDAO dao = new memberDAO();

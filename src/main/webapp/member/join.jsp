@@ -92,7 +92,7 @@
 </head>
 <body>
 	<h2> 회원가입 페이지 </h2>
-			<form action="./MemberJoinAcion.aim" method="post" name="fr" id="join">
+			<form action="./MemberJoinController.aim" method="post" name="fr" id="join">
 				<fieldset>
 					<legend> 회원가입 정보 </legend> 
 					<label>ID :</label> <input type="text" name="mb_id" class="mb_id" maxlength="12" >
