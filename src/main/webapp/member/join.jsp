@@ -82,7 +82,7 @@
 			document.fr.mb_tel.focus();
 			return;
 		}
-		alret("회원가입이 완료되었습니다");
+		alert("회원가입이 완료되었습니다");
 		document.fr.submit();
 	}
 	
