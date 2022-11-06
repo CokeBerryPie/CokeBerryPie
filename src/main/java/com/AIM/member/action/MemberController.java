@@ -14,12 +14,12 @@ import com.AIM.member.action.MemberJoinAction;
 
 
 
-public class MemberJoinController extends HttpServlet {
+public class MemberController extends HttpServlet {
 
 	
 	protected void doProcess(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		System.out.println(" MemberJoinController - doProcess() 호출");
+		System.out.println(" MemberController - doProcess() 호출");
 		System.out.println(" GET / POST 방식 상관없이 한번에 처리 ");
 		
 		///1.가상주소계산
@@ -52,27 +52,17 @@ public class MemberJoinController extends HttpServlet {
 			forward.setPath("./member/join.jsp");
 			forward.setRedirect(false);
 		}
-		else if(command.equals("./MemberJoinAction.aim")){
+		else if(command.equals("/MemberJoinAction.aim")){
 			System.out.println(" C : Action 호출");
 			System.out.println(" C : 패턴2");
-		 MemberJoinAction memberJoinAction = new MemberJoinAction();
+			action = new MemberJoinAction();
 			
 			try {
-				 forward = memberJoinAction.execute(request, response);
+				 forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
-		else if (command.equals("./MemberIdCheck.me")) {
-			System.out.println(" C : /MemberIdCheck.me ");
-		    System.out.println(" C : 패턴1 ");
-		    
-		    		forward = new ActionForward();
-		    forward.setPath("./member/idCheck.jsp");
-		    forward.setRedirect(false);
-		}
-		
-
 		
 		System.out.println(" C : (2단계 끝) 가상주소 매핑 완료 ----------------------- ");
 		//2.가상주소매핑
@@ -94,12 +84,12 @@ public class MemberJoinController extends HttpServlet {
 				dis.forward(request, response);				
 			}
 			
+			System.out.println(" C : (3단계 끝) 페이지 이동 완료 ----------------------- ");
+			//3.페이지 이동
+			
 		}
 		
-		System.out.println(" C : (3단계 끝) 페이지 이동 완료 ----------------------- ");
-		//3.페이지 이동
-		
-		
+	
 	}
 	
 	@Override

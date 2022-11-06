@@ -15,7 +15,7 @@
   
   <servlet>
   	<servlet-name>MemberJoinController</servlet-name>
-  	<servlet-class>com.AIM.Action.MemberJoinController</servlet-class>
+  	<servlet-class>com.AIM.member.action.MemberJoinController</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>MemberJoinController </servlet-name>

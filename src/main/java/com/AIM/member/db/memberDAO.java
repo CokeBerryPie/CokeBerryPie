@@ -54,7 +54,7 @@ public class memberDAO {
 		
 		try {
 			con = getConnection();
-			sql = "insert into class7_220721_team3_member(mb_id,mb_pw,mb_name,mb_mb_nick,mb_birth,mb_gender,mb_tel,mb_grade,mb_pay,mb_view)"
+			sql = "insert into AIM_member(mb_id,mb_pw,mb_name,mb_mb_nick,mb_birth,mb_gender,mb_tel,mb_grade,mb_pay,mb_view)"
 					+ "value(?,?,?,?,?,?,?,?,?,?)";
 			pstmt = con.prepareStatement(sql);
 			

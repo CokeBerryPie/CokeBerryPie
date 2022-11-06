@@ -5,6 +5,6 @@
     
     <%
     	
-    	response.sendRedirect("./Memberjoin.aim");
+    	response.sendRedirect("./MemberJoin.aim");
     
     %>
