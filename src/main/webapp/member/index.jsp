@@ -8,7 +8,6 @@
 </head>
 <body>
 
-	response.sendRedirect("/join.me");
 
 </body>
 </html>

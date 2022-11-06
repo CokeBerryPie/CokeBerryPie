@@ -29,9 +29,11 @@ public class MemberJoinAction implements Action {
 			}
 			
 			memberDAO dao = new memberDAO();
+			dao.memberjoin(dto);
 			
-			forward.setPath();
-			forward.setRedirect();
+			ActionForward forward = new ActionForward();
+			forward.setPath("./MemberLogin.me");
+			forward.setRedirect(true);
 			
 			return forward;
 		}

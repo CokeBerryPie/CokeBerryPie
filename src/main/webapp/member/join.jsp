@@ -133,7 +133,7 @@
 				<div class="clear"></div>
 				<div id="buttons">
 						<input type="button" value="회원가입" class="submit" onclick="fun02()" >
-						<input type="button" value="돌아가기" onclick="location.href='./AIMlogin.co.kr';" >
+						<input type="button" value="돌아가기" onclick="location.href='';" >
 				</div>
 			</form>
 			

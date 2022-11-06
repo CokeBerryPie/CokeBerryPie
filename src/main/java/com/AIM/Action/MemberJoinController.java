@@ -39,8 +39,8 @@ public class MemberJoinController extends HttpServlet {
 		Action action = null;
 		ActionForward forward = null;
 		
-		if(command.equals("/memberJoin.me")) {
-			System.out.println(" C : /memberJoin.me 호출");
+		if(command.equals("/join.me")) {
+			System.out.println(" C : /join.me 호출");
 			System.out.println(" C : 패턴1");
 						
 			forward = new ActionForward();

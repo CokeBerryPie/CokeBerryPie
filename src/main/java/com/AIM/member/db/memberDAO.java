@@ -30,6 +30,11 @@ public class memberDAO {
 		return con;
 		
 	}
+	
+
+
+	
+
 			
 	// 자원 해제
 	public void closeDB() {
