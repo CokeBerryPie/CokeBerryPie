@@ -26,17 +26,23 @@
 			document.fr.mb_id.focus();
 			return;
 		}
-		if(document.fr.mb_id.value == ""){
-			alert('id 중복 체크를 확인하여 주세요');
-			document.fr.mb_idCheck.focus();
+		if(document.fr.mb_id.value.length < 4){
+			alert('id는 4자리 이상 12자리 이하로 설정해주세요');
+			document.fr.mb_id.focus();
 			return;
 		}
+		
 		if(document.fr.mb_pw.value==""){
 			alert('pw를 입력하여 주세요');
 			document.fr.mb_pw.focus();
 			return;
 		}
-		if(document.fr.mb_pw2.vlaue !=="mb_pw"){
+		if(document.fr.mb_pw.value.length <8 ){
+			alert('pw는 8자리 이상 입력해주세요');
+			document.fr.mb_pw.focus();
+			return;
+		}
+		if(document.fr.mb_pw2.value !== document.fr.mb_pw.value){
 			alert('pw를 일치 시켜 주세요');
 			document.fr.mb_pw2.focus();
 			return;
@@ -46,14 +52,24 @@
 			document.fr.mb_name.focus();
 			return;
 		}
-		if(document.fr.nick.value == ""){
+		if(document.fr.mb_nick.value == ""){
 			alert('별명을 입력해 주세요');
-			document.fr.nick.focus();
+			document.fr.mb_nick.focus();
 			return;
 		}
-		if(document.fr.mb_birth.value == ""){
-			alert('생년월일을 선택해 주세요');
-			document.fr.mb_birth.focus();
+		if(document.fr.mb_birth1.value == "년"){
+			alert('년도를 선택해 주세요');
+			document.fr.mb_birth1.focus();
+			return;
+		}
+		if(document.fr.mb_birth2.value == "월"){
+			alert('월을 선택해 주세요');
+			document.fr.mb_birth2.focus();
+			return;
+		}
+		if(document.fr.mb_birth3.value == "일"){
+			alert('일을 선택해 주세요');
+			document.fr.mb_birth3.focus();
 			return;
 		}
 		if(document.fr.mb_gender.value == ""){
@@ -66,6 +82,8 @@
 			document.fr.mb_tel.focus();
 			return;
 		}
+		alret("회원가입이 완료되었습니다");
+		document.fr.submit();
 	}
 	
 
@@ -74,29 +92,30 @@
 </head>
 <body>
 	<h2> 회원가입 페이지 </h2>
-			<form action="" method="post" name="fr" id="join">
+			<form action="./AIM.co.kr" method="post" name="fr" id="join">
 				<fieldset>
 					<legend> 회원가입 정보 </legend> 
-					<label>ID :</label> <input type="text" name="mb_id" class="mb_id" >
+					<label>ID :</label> <input type="text" name="mb_id" class="mb_id" maxlength="12" >
 									    <input type="submit" name="mb_idCheck" value="ID중복확인" onclick="fun01()"> <br>
 					<label>비밀번호 : </label> <input type="password" name="mb_pw"> <br>
 					<label>비밀번호 확인 : </label> <input type="password" name="mb_pw2" ><br>
 					<label>이름 : </label> <input type="text" name="mb_name"><br>
-					<label>별명 : </label><input type="text" name="nick"><br>
-					<lavel>생년월일 : </lavel>
-								<select name="mb_birth">
+					<label>별명 : </label><input type="text" name="mb_nick">
+										<input type="submit" name="NickCheck" value="닉네임중복확인" onclick="fun03()"> <br>
+					<label>생년월일 : </label>
+								<select name="mb_birth1">
 									<option> 년 </option>
 									<c:forEach var="y" begin="2000" end="2014" step="1">
 										<option value="${y }">${y }년 </option>
 									</c:forEach>
 								</select>
-								<select name="mb_birth">
+								<select name="mb_birth2">
 									<option> 월 </option>
 									<c:forEach var="m" begin="1" end="12" step="1">
 										<option value="${m }">${m }월</option>
 									</c:forEach>								
 								</select>
-								<select name="mb_birth">
+								<select name="mb_birth3">
 									<option> 일 </option>
 									<c:forEach var="d" begin="1" end="31" step="1">
 										<option value="${d }">${d }일</option>
@@ -104,14 +123,17 @@
 								</select><br>
 					<label> 성별 : </label> <input type="radio" name="mb_gender" value="남">남
 											<input type="radio" name="mb_gender" value="여">여 <br>
-					<label> 전화번호 : </label> <input type="tel" name="mb_tel"> <br>			
+					<label> 전화번호 : </label> <input type="tel" name="mb_tel"> 
+								<input type="radio" name="SMS" value="동의" checked> SMS 동의 	
+								<input type="radio" name="SMS" value="비동의"> SMS 비동의
+							
 					
 					
 				</fieldset>
 				<div class="clear"></div>
 				<div id="buttons">
-						<input type="submit" value="회원가입" onclick="fun02()" class="submit">
-						<input type="button" value="돌아가기" >
+						<input type="button" value="회원가입" class="submit" onclick="fun02()" >
+						<input type="button" value="돌아가기" onclick="location.href='./AIMlogin.co.kr';" >
 				</div>
 			</form>
 			
