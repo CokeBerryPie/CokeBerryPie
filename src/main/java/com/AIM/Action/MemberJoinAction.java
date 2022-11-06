@@ -32,7 +32,7 @@ public class MemberJoinAction implements Action {
 			dao.memberjoin(dto);
 			
 			ActionForward forward = new ActionForward();
-			forward.setPath("./MemberLogin.me");
+			forward.setPath("./MemberLogin.aim");
 			forward.setRedirect(true);
 			
 			return forward;

@@ -21,7 +21,7 @@ public class memberDAO {
 		
 		Context initCTX = new InitialContext();
 		
-		DataSource ds = (DataSource) initCTX.lookup("java:comp/env/jdvc/mvc");
+		DataSource ds = (DataSource) initCTX.lookup("java:comp/env/jdvc/aim_join");
 		
 		con = ds.getConnection();
 		
@@ -59,8 +59,8 @@ public class memberDAO {
 		
 		try {
 			con = getConnection();
-			sql = "insert into class7_220721_team3(mb_id,mb_pw,mb_name,mb_mb_nick,mb_birth,mb_gender,mb_tel)"
-					+"value(?,?,?,?,?,?,?)";
+			sql = "insert into AIM_member(mb_id,mb_pw,mb_name,mb_mb_nick,mb_birth,mb_gender,mb_tel,mb_grade,mb_pay,mb_view)"
+					+ "value(?,?,?,?,?,?,?,?,?,?)";
 			pstmt = con.prepareStatement(sql);
 			
 			pstmt.setString(1, dto.getMb_id());
@@ -70,6 +70,9 @@ public class memberDAO {
 			pstmt.setString(5, dto.getMb_birth());
 			pstmt.setString(6, dto.getMb_gender());
 			pstmt.setString(7, dto.getMb_tel());
+			pstmt.setInt(8, dto.getMb_grade());
+			pstmt.setInt(9, dto.getMb_pay());
+			pstmt.setInt(10, dto.getMb_view());
 			
 			int result = pstmt.executeUpdate();
 			

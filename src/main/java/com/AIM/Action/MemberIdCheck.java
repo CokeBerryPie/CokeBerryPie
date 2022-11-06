@@ -18,7 +18,7 @@ public class MemberIdCheck implements Action {
 			
 			    memberDAO dao = new memberDAO();
 			
-			    int result = dao.memberIdChecㄴk(userid);
+			    int result = dao.memberIdCheck(userid);
 			
 			    if (result == 1) {
 			      System.out.println(" M : 아이디 사용 가능 " );

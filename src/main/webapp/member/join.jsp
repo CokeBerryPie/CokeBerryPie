@@ -17,7 +17,7 @@
 		
 		var inputID = document.fr.mb_id.value;
 		
-		window.open("./MemberIdCheck.me?inputID"+inputID,"","width=400,height=250,top=200,left=100");	
+		window.open("./MemberIdCheck.aim?inputID"+inputID,"","width=400,height=250,top=200,left=100");	
 	}	
 	
 	function fun02(){
@@ -92,7 +92,7 @@
 </head>
 <body>
 	<h2> 회원가입 페이지 </h2>
-			<form action="./MemberJoinAcion.me" method="post" name="fr" id="join">
+			<form action="./MemberJoinAcion.aim" method="post" name="fr" id="join">
 				<fieldset>
 					<legend> 회원가입 정보 </legend> 
 					<label>ID :</label> <input type="text" name="mb_id" class="mb_id" maxlength="12" >
@@ -132,7 +132,7 @@
 				</fieldset>
 				<div class="clear"></div>
 				<div id="buttons">
-						<input type="button" value="회원가입" class="submit" onclick="fun02()" >
+						<input type="submit" value="회원가입" class="submit" onclick="fun02()" >
 						<input type="button" value="돌아가기" onclick="location.href='';" >
 				</div>
 			</form>

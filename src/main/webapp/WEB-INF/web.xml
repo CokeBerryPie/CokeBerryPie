@@ -19,7 +19,7 @@
   </servlet>
   <servlet-mapping>
   	<servlet-name>MemberJoinController </servlet-name>
-  	<url-pattern> *.me </url-pattern> 
+  	<url-pattern> *.aim </url-pattern> 
   </servlet-mapping>
   
   <!-- 한글처리 -->
