@@ -50,10 +50,10 @@ public class MemberJoinController extends HttpServlet {
 		else if(command.equals("./MemberJoinAction.aim")){
 			System.out.println(" C : Action 호출");
 			System.out.println(" C : 패턴2");
+		 MemberJoinAction memberJoinAction = new MemberJoinAction();
 			
-			action = new MemberJoinAction();
 			try {
-				 forward = action.execute(request, response);
+				 forward = memberJoinAction.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -100,14 +100,12 @@ public class MemberJoinController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("\n\n BoardFrontController - doGet() 호출");
 		doProcess(request, response);
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("\n\n BoardFrontController - doPost() 호출");
 		doProcess(request, response);
 	}
 	
